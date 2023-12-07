@@ -1,22 +1,21 @@
 import React, {useState} from 'react'
 
-const Search = ({getCharacterName}) => {
-  const [text, setText] = useState('');
-  
-  const handleChange = (t)=>{
-    setText(t);
-    getCharacterName(t);
+const Search = ({name, setName}) => {  
+
+  const handleSubmit = (event) =>{
+    event.preventDefault();
   }
 
   return (
     <section className="search">
-        <form>
+        <form onSubmit={handleSubmit}>
             <input 
                 type='text'
                 className='form-control'
                 placeholder='Search Characters'
-                value={text}
-                onChange={(e) => handleChange(e.target.value)}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                onSubmit={handleSubmit}
                 autoFocus
             />
         </form>

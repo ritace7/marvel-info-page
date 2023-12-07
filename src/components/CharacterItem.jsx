@@ -21,7 +21,6 @@ const CharacterItem = ({item}) => {
                 <li>
                   <strong>Description:</strong> {item.description.substring(0, 80)}.. 
                 </li>:<></>}
-              {console.log(item)}
                <li>
                  <a href={item.urls[2]?item.urls[2].url:"https://www.marvel.com/articles#promo-4"} 
                     target="_blank" 

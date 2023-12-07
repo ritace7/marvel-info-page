@@ -120,6 +120,11 @@
     color: white;
     padding: 20px;
     transform: rotateY(180deg);
+    overflow:auto;
+  }
+
+  .card-back::-webkit-scrollbar{
+    visibility: hidden;
   }
   
   .card-back a{
@@ -176,11 +181,20 @@
   @media (max-width: 500px) {
     .cards {
       grid-template-columns: 1fr;
+      margin-bottom: 0.3em;
     }
     .card img {
       width: 100%;
       height: 300px;
       object-fit: contain;
+    }
+    .page-number{
+      margin: 0 0.2em;
+      width: 36px;
+      height: 36px;
+    } 
+    .prev, .next{
+      font-size: 1.4em;
     }
   }
 
@@ -205,5 +219,8 @@ footer a{
 
 .creator img{
   width: 1.4em;
+}
 
+.disabled{
+  display: none;
 }
