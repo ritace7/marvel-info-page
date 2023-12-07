@@ -4,7 +4,7 @@ import logo from '../assets/logo.png';
 const Header = () => {
   return (
     <header className='center'>
-      <a href='/mcu-app'>
+      <a href='/'>
         <img src={logo} alt='logo'/>
       </a>
     </header>
